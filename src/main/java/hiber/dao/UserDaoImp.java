@@ -34,6 +34,7 @@ public class UserDaoImp implements UserDao {
 
     @Override
     @Transactional
+    @SuppressWarnings("unchecked")
     public User userByCar(String model, int series) {
 
         TypedQuery<User> query = sessionFactory.getCurrentSession()
