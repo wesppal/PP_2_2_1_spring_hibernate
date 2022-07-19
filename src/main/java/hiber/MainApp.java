@@ -1,7 +1,6 @@
 package hiber;
 
 import hiber.config.AppConfig;
-import hiber.dao.UserDao;
 import hiber.model.Car;
 import hiber.model.User;
 import hiber.service.UserService;
@@ -36,6 +35,15 @@ public class MainApp {
         }
 
         User user1111 = userService.userByCar("BMW", 535);
+        printUser(user1111);
+        User user2222 = userService.userByCar("citroen", 15);
+        printUser(user2222);
+
+
+        context.close();
+    }
+
+    private static void printUser(User user1111) {
         if (user1111 != null) {
         System.out.println("___________________________________");
         System.out.println("Id = " + user1111.getId());
@@ -44,17 +52,5 @@ public class MainApp {
         System.out.println("Email = " + user1111.getEmail());
         System.out.println();
         }
-        User user2222 = userService.userByCar("citroen", 15);
-        if (user2222 != null) {
-            System.out.println("___________________________________");
-            System.out.println("Id = " + user2222.getId());
-            System.out.println("First Name = " + user2222.getFirstName());
-            System.out.println("Last Name = " + user2222.getLastName());
-            System.out.println("Email = " + user2222.getEmail());
-            System.out.println();
-        }
-
-
-        context.close();
     }
 }
