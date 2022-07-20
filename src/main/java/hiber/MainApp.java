@@ -19,10 +19,10 @@ public class MainApp {
         userService.add(new User("User2", "Lastname2", "user2@mail.ru", null));
         userService.add(new User("User3", "Lastname3", "user3@mail.ru", null));
         userService.add(new User("User4", "Lastname4", "user4@mail.ru", null));
-        Car car1 = new Car("BMW", 535);
-        Car car2 = new Car("citroen", 15);
-        User user11 = new User("test", "test2", "test@mail.ru", car1);
-        User user22 = new User("testtt", "testtt", "testtt@mail.ru", car2);
+        Car car1 = new Car("BMW", 102);
+        Car car2 = new Car("citroen", 105);
+        User user11 = new User("test1", "test1", "test1@mail.ru", car1);
+        User user22 = new User("testtt1", "testtt1", "testtt1@mail.ru", car2);
         userService.add(user11);
         userService.add(user22);
         List<User> users = userService.listUsers();
@@ -34,9 +34,9 @@ public class MainApp {
             System.out.println();
         }
 
-        User user1111 = userService.userByCar("BMW", 535);
+        User user1111 = userService.userByCar("BMW", 102);
         printUser(user1111);
-        User user2222 = userService.userByCar("citroen", 15);
+        User user2222 = userService.userByCar("citroen", 105);
         printUser(user2222);
 
 
